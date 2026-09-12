@@ -75,4 +75,7 @@ class HomeViewModel extends ChangeNotifier {
     }
     notifyListeners();
   }
+  Future<void> logout() async {
+  await _sessionRepository.clearSession();
+  }
 }

@@ -24,4 +24,8 @@ class SessionRepository {
     final prefs = await SharedPreferences.getInstance();
     return prefs.getString(_keyLastName);
   }
+  Future<void> clearSession() async {
+  final prefs = await SharedPreferences.getInstance();
+  await prefs.clear();
+  }
 }
